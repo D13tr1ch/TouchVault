@@ -5,8 +5,8 @@
 | Field | Value |
 |-------|-------|
 | **IP Owner** | TriHarmonic Solutions |
-| **Parent Entity** | Beacon And Bridge LLC |
-| **Relationship** | TriHarmonic Solutions is a division of Beacon And Bridge LLC |
+| **Parent Entity** | Beacon And Bridge Solutions LLC |
+| **Relationship** | TriHarmonic Solutions is a division of Beacon And Bridge Solutions LLC |
 | **Registry Date** | March 20, 2026 |
 | **Registry Version** | 1.0 |
 

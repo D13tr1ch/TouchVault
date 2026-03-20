@@ -4,8 +4,8 @@
     ModuleVersion     = '1.0.0'
     GUID              = 'a3f7c2e1-9b84-4d6f-b5e3-1c8a2f0d7e9b'
     Author            = 'TriHarmonic Solutions'
-    CompanyName       = 'Beacon And Bridge LLC'
-    Copyright         = '(c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge LLC. Dual License: Free personal / Commercial $5+.'
+    CompanyName       = 'Beacon And Bridge Solutions LLC'
+    Copyright         = '(c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge Solutions LLC. Dual License: Free personal / Commercial $5+.'
     Description       = 'YubiKey-backed KeePass credential management for GitHub Copilot and PowerShell automation. Provides 3-tier caching (in-memory, DPAPI disk, CLI+YubiKey) with a topmost authorization popup.'
 
     # Requirements

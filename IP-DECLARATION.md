@@ -3,14 +3,14 @@
 ## Owner
 
 **TriHarmonic Solutions**
-A division of **Beacon And Bridge LLC**
+A division of **Beacon And Bridge Solutions LLC**
 
 ## Declaration
 
 All intellectual property contained in this repository, including but not limited
 to source code, documentation, designs, trade secrets, algorithms, architectures,
 and associated materials, is the sole and exclusive property of TriHarmonic
-Solutions, a division of Beacon And Bridge LLC.
+Solutions, a division of Beacon And Bridge Solutions LLC.
 
 ## Covered Works
 
@@ -46,7 +46,7 @@ First public release (v1.0.0): **March 20, 2026**
 
 ## Copyright Notice
 
-Copyright (c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge LLC.
+Copyright (c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge Solutions LLC.
 All rights reserved.
 
 ## Licensing
@@ -57,7 +57,7 @@ The software is distributed under a dual-license model (see [LICENSE](LICENSE)):
 
 Distribution under these license terms does not constitute a transfer or waiver of
 intellectual property rights. All IP rights remain exclusively with TriHarmonic
-Solutions / Beacon And Bridge LLC.
+Solutions / Beacon And Bridge Solutions LLC.
 
 ## Third-Party Dependencies
 
@@ -70,4 +70,4 @@ claimed.
 
 Portions of the implementation that are not publicly distributed (including internal
 tooling, deployment scripts, and infrastructure configurations) remain trade secrets
-of TriHarmonic Solutions / Beacon And Bridge LLC.
+of TriHarmonic Solutions / Beacon And Bridge Solutions LLC.
