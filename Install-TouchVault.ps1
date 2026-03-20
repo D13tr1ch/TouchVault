@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    YubiVault Setup Wizard - Configures KeePass + YubiKey credential management.
+    TouchVault Setup Wizard - Configures KeePass + YubiKey credential management.
 
 .DESCRIPTION
     Interactive setup that:
@@ -10,11 +10,11 @@
     3. Creates or locates the KeePass database
     4. Configures YubiKey HMAC-SHA1 challenge-response on Slot 2
     5. Saves the master password with DPAPI encryption
-    6. Installs the YubiVault module to the user's PowerShell module path
+    6. Installs the TouchVault module to the user's PowerShell module path
     7. Verifies everything works
 
 .EXAMPLE
-    .\Install-YubiVault.ps1
+    .\Install-TouchVault.ps1
 #>
 
 [CmdletBinding()]
@@ -49,7 +49,7 @@ function Test-Admin {
 # Banner
 # ---------------------------------------------------------------------------
 Write-Host ""
-Write-Host "  YubiVault Setup Wizard" -ForegroundColor Yellow
+Write-Host "  TouchVault Setup Wizard" -ForegroundColor Yellow
 Write-Host "  ======================" -ForegroundColor DarkYellow
 Write-Host "  YubiKey-backed KeePass credential management" -ForegroundColor Gray
 Write-Host "  for GitHub Copilot and PowerShell automation" -ForegroundColor Gray
@@ -125,7 +125,7 @@ if ($ykman) {
             Write-OK "Slot 2 already configured for HMAC-SHA1 challenge-response"
         } else {
             Write-Warn "Slot 2 is not configured for HMAC-SHA1."
-            $configSlot = Read-Host "     Configure Slot 2 now? This is required for YubiVault. (Y/n)"
+            $configSlot = Read-Host "     Configure Slot 2 now? This is required for TouchVault. (Y/n)"
             if ($configSlot -ne 'n') {
                 Write-Host "     Touch your YubiKey when it blinks..." -ForegroundColor Yellow
                 & $ykman otp chalresp --touch --generate 2 --force 2>&1
@@ -210,22 +210,22 @@ if ((Test-Path $credFile) -and -not $Force) {
 # ---------------------------------------------------------------------------
 # Step 5: Install module
 # ---------------------------------------------------------------------------
-Write-Step "5/6" "Installing YubiVault Module"
+Write-Step "5/6" "Installing TouchVault Module"
 
 if ($SkipModuleInstall) {
     Write-Warn "Skipped (use -SkipModuleInstall to skip)"
 } else {
     $moduleSrc  = $PSScriptRoot
-    $moduleBase = "$env:USERPROFILE\Documents\PowerShell\Modules\YubiVault"
-    $moduleLegacy = "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\YubiVault"
+    $moduleBase = "$env:USERPROFILE\Documents\PowerShell\Modules\TouchVault"
+    $moduleLegacy = "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\TouchVault"
 
     # Install to both PS 7 and PS 5.1 module paths
     foreach ($target in @($moduleBase, $moduleLegacy)) {
         $verDir = Join-Path $target "1.0.0"
         if (-not (Test-Path $verDir)) { New-Item -Path $verDir -ItemType Directory -Force | Out-Null }
 
-        Copy-Item "$moduleSrc\YubiVault.psd1" "$verDir\" -Force
-        Copy-Item "$moduleSrc\YubiVault.psm1" "$verDir\" -Force
+        Copy-Item "$moduleSrc\TouchVault.psd1" "$verDir\" -Force
+        Copy-Item "$moduleSrc\TouchVault.psm1" "$verDir\" -Force
 
         # Copy LICENSE and README if present
         if (Test-Path "$moduleSrc\LICENSE")   { Copy-Item "$moduleSrc\LICENSE"   "$verDir\" -Force }
@@ -238,12 +238,12 @@ if ($SkipModuleInstall) {
     $profilePath = $PROFILE.CurrentUserAllHosts
     if ($profilePath -and (Test-Path $profilePath)) {
         $profileContent = Get-Content $profilePath -Raw
-        if ($profileContent -notmatch "YubiVault") {
-            Write-Host "     TIP: Add 'Import-Module YubiVault' to your PowerShell profile:" -ForegroundColor Gray
+        if ($profileContent -notmatch "TouchVault") {
+            Write-Host "     TIP: Add 'Import-Module TouchVault' to your PowerShell profile:" -ForegroundColor Gray
             Write-Host "          $profilePath" -ForegroundColor Gray
         }
     } else {
-        Write-Host "     TIP: Add 'Import-Module YubiVault' to your PowerShell profile for auto-loading." -ForegroundColor Gray
+        Write-Host "     TIP: Add 'Import-Module TouchVault' to your PowerShell profile for auto-loading." -ForegroundColor Gray
     }
 }
 
@@ -253,7 +253,7 @@ if ($SkipModuleInstall) {
 Write-Step "6/6" "Verification"
 
 try {
-    Import-Module "$PSScriptRoot\YubiVault.psd1" -Force -ErrorAction Stop
+    Import-Module "$PSScriptRoot\TouchVault.psd1" -Force -ErrorAction Stop
     Write-OK "Module imported successfully"
 
     $config = Get-VaultConfig
@@ -265,7 +265,7 @@ try {
     Write-Host "  Setup Complete!" -ForegroundColor Green
     Write-Host ""
     Write-Host "  Quick Start:" -ForegroundColor White
-    Write-Host "    Import-Module YubiVault" -ForegroundColor Gray
+    Write-Host "    Import-Module TouchVault" -ForegroundColor Gray
     Write-Host '    $creds = Get-VaultEntry "MyApp"' -ForegroundColor Gray
     Write-Host '    $creds.UserName' -ForegroundColor Gray
     Write-Host '    $creds.Password' -ForegroundColor Gray

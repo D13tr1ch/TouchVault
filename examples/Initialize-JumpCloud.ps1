@@ -1,7 +1,7 @@
 # Initialize-JumpCloud.ps1 - Example: JumpCloud Admin API integration
 # Usage: . "path\to\Initialize-JumpCloud.ps1"
 
-Import-Module YubiVault -ErrorAction Stop
+Import-Module TouchVault -ErrorAction Stop
 
 # Non-secret config (orgId, baseUrl - safe to commit)
 $_jcNonSecret = Get-Content "$env:USERPROFILE\.jumpcloud\config.json" -Raw | ConvertFrom-Json

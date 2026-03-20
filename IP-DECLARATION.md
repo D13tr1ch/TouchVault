@@ -16,13 +16,13 @@ Solutions, a division of Beacon And Bridge Solutions LLC.
 
 This declaration covers the following intellectual property:
 
-### YubiVault PowerShell Module (v1.0.0+)
+### TouchVault PowerShell Module (v1.0.0+)
 
 | Asset | Description |
 |-------|-------------|
-| **YubiVault.psm1** | Core module: 3-tier credential caching engine, DPAPI encryption layer, YubiKey HMAC-SHA1 integration, WinForms authorization popup, disk cache management |
-| **YubiVault.psd1** | Module manifest and metadata |
-| **Install-YubiVault.ps1** | 6-step setup wizard with auto-detection logic |
+| **TouchVault.psm1** | Core module: 3-tier credential caching engine, DPAPI encryption layer, YubiKey HMAC-SHA1 integration, WinForms authorization popup, disk cache management |
+| **TouchVault.psd1** | Module manifest and metadata |
+| **Install-TouchVault.ps1** | 6-step setup wizard with auto-detection logic |
 | **.copilot-instructions.md** | GitHub Copilot integration rules and patterns |
 | **Documentation** | README.md, CHANGELOG.md, and all associated guides |
 | **Examples** | Initialize-Omada.ps1, Initialize-JumpCloud.ps1, and any future example integrations |
@@ -41,7 +41,7 @@ First public release (v1.0.0): **March 20, 2026**
 
 ## Repository
 
-- GitHub: https://github.com/D13tr1ch/YubiVault
+- GitHub: https://github.com/D13tr1ch/TouchVault
 - Initial commit: v1.0.0, March 20, 2026
 
 ## Copyright Notice
@@ -61,8 +61,8 @@ Solutions / Beacon And Bridge Solutions LLC.
 
 ## Third-Party Dependencies
 
-YubiVault invokes KeePassXC as an external CLI process. KeePassXC is a separate
-open-source project licensed under GPL-2.0/GPL-3.0. YubiVault does not incorporate,
+TouchVault invokes KeePassXC as an external CLI process. KeePassXC is a separate
+open-source project licensed under GPL-2.0/GPL-3.0. TouchVault does not incorporate,
 bundle, modify, or create derivative works of KeePassXC. No third-party IP is
 claimed.
 

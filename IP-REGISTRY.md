@@ -14,17 +14,17 @@
 
 ## IP Asset Inventory
 
-### Asset #001: YubiVault
+### Asset #001: TouchVault
 
 | Field | Detail |
 |-------|--------|
-| **Asset Name** | YubiVault |
+| **Asset Name** | TouchVault |
 | **Asset Type** | Software (PowerShell Module) |
 | **Classification** | Proprietary with dual-license distribution |
 | **Status** | Active, v1.0.0 released |
 | **Date Created** | March 2026 |
 | **Date First Published** | March 20, 2026 |
-| **Repository** | https://github.com/D13tr1ch/YubiVault |
+| **Repository** | https://github.com/D13tr1ch/TouchVault |
 | **Language/Platform** | PowerShell 5.1+, Windows 10+ |
 | **License Model** | Dual: Free personal / Commercial $5+ per user |
 | **Purchase URL** | https://buymeacoffee.com/D13tr1ch |
@@ -46,9 +46,9 @@ password storage.
 
 | File | Lines | Purpose |
 |------|-------|---------|
-| YubiVault.psm1 | ~700 | Core module: 11 public functions, 6 internal functions, 5 aliases |
-| YubiVault.psd1 | ~60 | Module manifest |
-| Install-YubiVault.ps1 | ~300 | 6-step setup wizard |
+| TouchVault.psm1 | ~700 | Core module: 11 public functions, 6 internal functions, 5 aliases |
+| TouchVault.psd1 | ~60 | Module manifest |
+| Install-TouchVault.ps1 | ~300 | 6-step setup wizard |
 | .copilot-instructions.md | ~70 | AI assistant integration rules |
 | README.md | ~310 | Technical documentation |
 | LICENSE | ~70 | Dual license terms |
@@ -67,7 +67,7 @@ password storage.
 | **Classification** | Trade Secret |
 | **Status** | Active, in use |
 | **Date Created** | March 2026 |
-| **Associated Product** | YubiVault |
+| **Associated Product** | TouchVault |
 
 **Description**: Custom binary format for portable encrypted backups using AES-256-CBC
 with DPAPI-wrapped key material.
@@ -93,7 +93,7 @@ with DPAPI-wrapped key material.
 | **Classification** | Proprietary (published in documentation) |
 | **Status** | Active |
 | **Date Created** | March 2026 |
-| **Associated Product** | YubiVault |
+| **Associated Product** | TouchVault |
 
 **Description**: A layered caching strategy for hardware-backed credential retrieval:
 - **Tier 1**: In-memory hashtable (session scope, instant)
@@ -106,7 +106,7 @@ with DPAPI-wrapped key material.
 
 | Mark | Status | Scope |
 |------|--------|-------|
-| YubiVault | Common law (unregistered) | Software product name |
+| TouchVault | Common law (unregistered) | Software product name |
 
 Note: "YubiKey" is a registered trademark of Yubico, Inc. "KeePassXC" is a trademark
 of the KeePassXC Team. These marks are used solely for descriptive compatibility purposes.

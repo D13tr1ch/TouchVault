@@ -1,6 +1,6 @@
 @{
     # Module identity
-    RootModule        = 'YubiVault.psm1'
+    RootModule        = 'TouchVault.psm1'
     ModuleVersion     = '1.0.0'
     GUID              = 'a3f7c2e1-9b84-4d6f-b5e3-1c8a2f0d7e9b'
     Author            = 'TriHarmonic Solutions'
@@ -40,8 +40,8 @@
     PrivateData = @{
         PSData = @{
             Tags         = @('KeePass', 'YubiKey', 'Secrets', 'DPAPI', 'Credentials', 'Security', 'Copilot', 'Automation')
-            LicenseUri   = 'https://github.com/D13tr1ch/YubiVault/blob/main/LICENSE'
-            ProjectUri   = 'https://github.com/D13tr1ch/YubiVault'
+            LicenseUri   = 'https://github.com/D13tr1ch/TouchVault/blob/main/LICENSE'
+            ProjectUri   = 'https://github.com/D13tr1ch/TouchVault'
             # IconUri    = ''
             ReleaseNotes = @'
 v1.0.0 - Initial release
@@ -50,7 +50,7 @@ v1.0.0 - Initial release
 - Deny button with reason prompt and audit trail
 - DPAPI-encrypted master password storage
 - Backward-compatible aliases for existing scripts
-- Setup wizard (Install-YubiVault.ps1)
+- Setup wizard (Install-TouchVault.ps1)
 - GitHub Copilot integration guide
 '@
         }

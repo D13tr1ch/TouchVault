@@ -1,4 +1,4 @@
-YubiVault Dual License
+TouchVault Dual License
 
 Copyright (c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge Solutions LLC.
 All rights reserved.
@@ -18,7 +18,7 @@ non-commercial purposes, subject to the following conditions:
   copies or substantial portions of the Software.
 - The Software shall not be sold, sublicensed, or redistributed for
   commercial gain without a Commercial License (see below).
-- Attribution to "YubiVault by TriHarmonic Solutions" must be preserved.
+- Attribution to "TouchVault by TriHarmonic Solutions" must be preserved.
 
 =============================================================================
 2. COMMERCIAL & PROFESSIONAL LICENSE ($5+ per user, pay what you think is fair)
@@ -59,7 +59,7 @@ SOFTWARE.
 DEPENDENCY NOTICE
 =============================================================================
 
-YubiVault invokes KeePassXC (https://keepassxc.org/) as an external CLI tool.
-KeePassXC is licensed under GPL-2.0/GPL-3.0. YubiVault does not bundle,
+TouchVault invokes KeePassXC (https://keepassxc.org/) as an external CLI tool.
+KeePassXC is licensed under GPL-2.0/GPL-3.0. TouchVault does not bundle,
 modify, or link against KeePassXC -- it calls the CLI as a separate process.
 Users must install KeePassXC independently and comply with its license terms.

@@ -1,12 +1,12 @@
-# YubiVault
+# TouchVault
 
 **YubiKey-backed KeePass credential management for GitHub Copilot and PowerShell automation.**
 
-YubiVault secures your API keys, passwords, and secrets in a KeePass database protected by your YubiKey. A 3-tier caching system minimizes YubiKey touches while keeping credentials hardware-protected. Built for GitHub Copilot and automation workflows where secrets should never exist in plaintext config files.
+TouchVault secures your API keys, passwords, and secrets in a KeePass database protected by your YubiKey. A 3-tier caching system minimizes YubiKey touches while keeping credentials hardware-protected. Built for GitHub Copilot and automation workflows where secrets should never exist in plaintext config files.
 
 > **Free for personal use.** Commercial/professional use: [$5+ (pay what you think is fair)](https://buymeacoffee.com/D13tr1ch). One-time purchase, all v1.x updates included.
 >
-> [Buy a License](https://buymeacoffee.com/D13tr1ch) | [Report an Issue](https://github.com/D13tr1ch/YubiVault/issues)
+> [Buy a License](https://buymeacoffee.com/D13tr1ch) | [Report an Issue](https://github.com/D13tr1ch/TouchVault/issues)
 
 ---
 
@@ -53,8 +53,8 @@ Script calls Get-VaultEntry
 ### Quick Setup
 
 ```powershell
-# Clone or download YubiVault, then run the setup wizard:
-.\Install-YubiVault.ps1
+# Clone or download TouchVault, then run the setup wizard:
+.\Install-TouchVault.ps1
 ```
 
 The wizard will:
@@ -69,12 +69,12 @@ The wizard will:
 
 ```powershell
 # 1. Copy module to your PowerShell modules directory
-$dest = "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\YubiVault\1.0.0"
+$dest = "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\TouchVault\1.0.0"
 New-Item -Path $dest -ItemType Directory -Force
-Copy-Item YubiVault.psd1, YubiVault.psm1 $dest
+Copy-Item TouchVault.psd1, TouchVault.psm1 $dest
 
 # 2. Import and configure
-Import-Module YubiVault
+Import-Module TouchVault
 Set-VaultConfig -DatabasePath "C:\path\to\your\database.kdbx"
 Save-VaultMasterPassword
 
@@ -84,7 +84,7 @@ Test-VaultPrerequisites
 
 ### YubiKey Slot Configuration
 
-YubiVault uses **Slot 2** for HMAC-SHA1 challenge-response (Slot 1 is typically for static passwords).
+TouchVault uses **Slot 2** for HMAC-SHA1 challenge-response (Slot 1 is typically for static passwords).
 
 ```powershell
 # Using YubiKey Manager CLI
@@ -100,7 +100,7 @@ Then in KeePassXC: **Database > Database Settings > Security > Add Additional Pr
 ### Basic Credential Retrieval
 
 ```powershell
-Import-Module YubiVault
+Import-Module TouchVault
 
 # Get all fields from a KeePass entry
 $creds = Get-VaultEntry "My API Service"
@@ -117,7 +117,7 @@ $secret = Get-VaultSecret "My API Service" -Field Password
 
 ```powershell
 # Initialize-MyApp.ps1
-Import-Module YubiVault
+Import-Module TouchVault
 
 # Non-secret config (safe to commit)
 $config = Get-Content '~\.myapp\config.json' -Raw | ConvertFrom-Json
@@ -142,8 +142,8 @@ When Copilot generates scripts that need credentials:
 # Instead of hardcoded secrets:
 #   $apiKey = "sk-abc123..."        # NEVER DO THIS
 
-# Use YubiVault:
-Import-Module YubiVault
+# Use TouchVault:
+Import-Module TouchVault
 $apiKey = Get-VaultSecret "OpenAI API" -Field Password
 ```
 
@@ -230,10 +230,10 @@ If you have existing scripts using the old function names, they still work:
 ## Architecture
 
 ```
-YubiVault/
-  YubiVault.psd1              Module manifest
-  YubiVault.psm1              All functions (single file for simplicity)
-  Install-YubiVault.ps1       Setup wizard
+TouchVault/
+  TouchVault.psd1              Module manifest
+  TouchVault.psm1              All functions (single file for simplicity)
+  Install-TouchVault.ps1       Setup wizard
   README.md                   This file
   LICENSE                     Dual license (personal free / commercial $5+)
   .copilot-instructions.md    GitHub Copilot integration guide
@@ -267,7 +267,7 @@ User files (created by setup):
 
 ## License
 
-**YubiVault** uses a [dual license](LICENSE):
+**TouchVault** uses a [dual license](LICENSE):
 
 | Use Case | License | Cost |
 |----------|---------|------|
@@ -278,7 +278,7 @@ Copyright (c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge S
 
 One-time purchase. Covers all v1.x updates. No subscription.
 
-**Dependency notice:** YubiVault calls [KeePassXC](https://keepassxc.org/) as an external CLI tool. KeePassXC is licensed under [GPL-2.0/GPL-3.0](https://github.com/keepassxreboot/keepassxc/blob/develop/LICENSE). YubiVault does not bundle, modify, or redistribute KeePassXC. Users must install KeePassXC independently.
+**Dependency notice:** TouchVault calls [KeePassXC](https://keepassxc.org/) as an external CLI tool. KeePassXC is licensed under [GPL-2.0/GPL-3.0](https://github.com/keepassxreboot/keepassxc/blob/develop/LICENSE). TouchVault does not bundle, modify, or redistribute KeePassXC. Users must install KeePassXC independently.
 
 
 ---
@@ -288,7 +288,7 @@ One-time purchase. Covers all v1.x updates. No subscription.
 Contributions welcome! By submitting a PR, you agree that your contribution is licensed under the same dual-license terms.
 
 1. Fork & clone
-2. Make changes to `YubiVault.psm1`
+2. Make changes to `TouchVault.psm1`
 3. Test with `Test-VaultPrerequisites` and `Get-VaultEntry`
 4. Submit a PR
 

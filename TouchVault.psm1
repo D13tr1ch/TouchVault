@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 
 # ============================================================================
-# YubiVault — YubiKey-backed KeePass credential management for automation
+# TouchVault — YubiKey-backed KeePass credential management for automation
 # ============================================================================
 # 3-tier cache: in-memory → DPAPI disk cache → KeePassXC CLI + YubiKey
 # ============================================================================
@@ -22,7 +22,7 @@ $script:DefaultCli       = $null   # Set via Set-VaultConfig or auto-detected
 function Set-VaultConfig {
     <#
     .SYNOPSIS
-        Configures YubiVault defaults (database path, CLI path, cache TTL).
+        Configures TouchVault defaults (database path, CLI path, cache TTL).
     .PARAMETER DatabasePath
         Path to the KeePass .kdbx file.
     .PARAMETER CliPath
@@ -46,7 +46,7 @@ function Set-VaultConfig {
 function Get-VaultConfig {
     <#
     .SYNOPSIS
-        Returns the current YubiVault configuration.
+        Returns the current TouchVault configuration.
     #>
     [PSCustomObject]@{
         DatabasePath  = Resolve-DatabasePath
@@ -512,7 +512,7 @@ function Clear-VaultCache {
     if (Test-Path $script:DiskCacheDir) {
         Remove-Item "$script:DiskCacheDir\*.dat" -Force -ErrorAction SilentlyContinue
     }
-    Write-Host "YubiVault caches cleared (memory + disk)." -ForegroundColor Yellow
+    Write-Host "TouchVault caches cleared (memory + disk)." -ForegroundColor Yellow
 }
 
 function Update-VaultEntry {
@@ -584,7 +584,7 @@ function Initialize-VaultApp {
 # Initialize-$AppName.ps1 - Dot-source this to get $varName with secrets from KeePass
 # Usage: . "$OutputDir\Initialize-$AppName.ps1"
 
-Import-Module YubiVault -ErrorAction Stop
+Import-Module TouchVault -ErrorAction Stop
 
 # Non-secret config
 `$_nonSecret = Get-Content '$configPath' -Raw | ConvertFrom-Json

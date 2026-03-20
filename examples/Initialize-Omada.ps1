@@ -1,7 +1,7 @@
 # Initialize-Omada.ps1 - Example: TP-Link Omada Cloud API integration
 # Usage: . "path\to\Initialize-Omada.ps1"
 
-Import-Module YubiVault -ErrorAction Stop
+Import-Module TouchVault -ErrorAction Stop
 
 # Non-secret config (baseUrl, omadacId - safe to commit)
 $_omadaNonSecret = Get-Content "$env:USERPROFILE\.omada\omada-config.json" -Raw | ConvertFrom-Json

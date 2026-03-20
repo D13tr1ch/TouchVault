@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to YubiVault will be documented in this file.
+All notable changes to TouchVault will be documented in this file.
 
 ## [1.0.0] - 2026-03-20
 
@@ -14,6 +14,6 @@ All notable changes to YubiVault will be documented in this file.
 - `Test-VaultPrerequisites` system readiness check
 - `Initialize-VaultApp` scaffold generator for new integrations
 - `Format-Masked` utility for safe secret display
-- Setup wizard (`Install-YubiVault.ps1`) with 6-step guided configuration
+- Setup wizard (`Install-TouchVault.ps1`) with 6-step guided configuration
 - GitHub Copilot integration guide (`.copilot-instructions.md`)
 - Example integrations for TP-Link Omada and JumpCloud
