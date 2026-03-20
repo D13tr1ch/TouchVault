@@ -4,9 +4,9 @@
 
 YubiVault secures your API keys, passwords, and secrets in a KeePass database protected by your YubiKey. A 3-tier caching system minimizes YubiKey touches while keeping credentials hardware-protected. Built for GitHub Copilot and automation workflows where secrets should never exist in plaintext config files.
 
-> **Free for personal use.** Commercial/professional use: [$5+ (pay what you think is fair)](https://buymeacoffee.com/ntsh/e/349997). One-time purchase, all v1.x updates included.
+> **Free for personal use.** Commercial/professional use: [$5+ (pay what you think is fair)](https://buymeacoffee.com/D13tr1ch). One-time purchase, all v1.x updates included.
 >
-> [Buy a License](https://buymeacoffee.com/ntsh/e/349997) | [Report an Issue](https://github.com/D13tr1ch/YubiVault/issues)
+> [Buy a License](https://buymeacoffee.com/D13tr1ch) | [Report an Issue](https://github.com/D13tr1ch/YubiVault/issues)
 
 ---
 
@@ -272,7 +272,7 @@ User files (created by setup):
 | Use Case | License | Cost |
 |----------|---------|------|
 | Personal, educational, non-commercial | Free License | $0 |
-| Commercial, professional, freelance, business | [Commercial License](https://buymeacoffee.com/ntsh/e/349997) | $5+ per user (pay what you think is fair) |
+| Commercial, professional, freelance, business | [Commercial License](https://buymeacoffee.com/D13tr1ch) | $5+ per user (pay what you think is fair) |
 
 Copyright (c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge Solutions LLC. All rights reserved.
 

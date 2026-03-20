@@ -27,7 +27,7 @@
 | **Repository** | https://github.com/D13tr1ch/YubiVault |
 | **Language/Platform** | PowerShell 5.1+, Windows 10+ |
 | **License Model** | Dual: Free personal / Commercial $5+ per user |
-| **Purchase URL** | https://buymeacoffee.com/ntsh/e/349997 |
+| **Purchase URL** | https://buymeacoffee.com/D13tr1ch |
 | **GUID** | a3f7c2e1-9b84-4d6f-b5e3-1c8a2f0d7e9b |
 
 **Description**: YubiKey-backed KeePass credential management module for GitHub
