@@ -3,9 +3,9 @@
     RootModule        = 'YubiVault.psm1'
     ModuleVersion     = '1.0.0'
     GUID              = 'a3f7c2e1-9b84-4d6f-b5e3-1c8a2f0d7e9b'
-    Author            = 'NTSH'
-    CompanyName       = 'NTSH'
-    Copyright         = '(c) 2025-2026 NTSH. Dual License: Free personal / Commercial $5+.'
+    Author            = 'TriHarmonic Solutions'
+    CompanyName       = 'Beacon And Bridge LLC'
+    Copyright         = '(c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge LLC. Dual License: Free personal / Commercial $5+.'
     Description       = 'YubiKey-backed KeePass credential management for GitHub Copilot and PowerShell automation. Provides 3-tier caching (in-memory, DPAPI disk, CLI+YubiKey) with a topmost authorization popup.'
 
     # Requirements
@@ -40,8 +40,8 @@
     PrivateData = @{
         PSData = @{
             Tags         = @('KeePass', 'YubiKey', 'Secrets', 'DPAPI', 'Credentials', 'Security', 'Copilot', 'Automation')
-            LicenseUri   = 'https://github.com/ntsh/YubiVault/blob/main/LICENSE'
-            ProjectUri   = 'https://github.com/ntsh/YubiVault'
+            LicenseUri   = 'https://github.com/D13tr1ch/YubiVault/blob/main/LICENSE'
+            ProjectUri   = 'https://github.com/D13tr1ch/YubiVault'
             # IconUri    = ''
             ReleaseNotes = @'
 v1.0.0 - Initial release

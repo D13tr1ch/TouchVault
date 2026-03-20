@@ -6,7 +6,7 @@ YubiVault secures your API keys, passwords, and secrets in a KeePass database pr
 
 > **Free for personal use.** Commercial/professional use: [$5+ (pay what you think is fair)](https://buymeacoffee.com/ntsh/e/349997). One-time purchase, all v1.x updates included.
 >
-> [Buy a License](https://buymeacoffee.com/ntsh/e/349997) | [Report an Issue](https://github.com/ntsh/YubiVault/issues)
+> [Buy a License](https://buymeacoffee.com/ntsh/e/349997) | [Report an Issue](https://github.com/D13tr1ch/YubiVault/issues)
 
 ---
 
@@ -274,9 +274,12 @@ User files (created by setup):
 | Personal, educational, non-commercial | Free License | $0 |
 | Commercial, professional, freelance, business | [Commercial License](https://buymeacoffee.com/ntsh/e/349997) | $5+ per user (pay what you think is fair) |
 
+Copyright (c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge LLC. All rights reserved.
+
 One-time purchase. Covers all v1.x updates. No subscription.
 
 **Dependency notice:** YubiVault calls [KeePassXC](https://keepassxc.org/) as an external CLI tool. KeePassXC is licensed under [GPL-2.0/GPL-3.0](https://github.com/keepassxreboot/keepassxc/blob/develop/LICENSE). YubiVault does not bundle, modify, or redistribute KeePassXC. Users must install KeePassXC independently.
+
 
 ---
 
