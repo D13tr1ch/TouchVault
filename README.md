@@ -1,12 +1,16 @@
 # TouchVault
 
-**YubiKey-backed KeePass credential management for GitHub Copilot and PowerShell automation.**
+**Hardware-key-backed KeePass credential management for GitHub Copilot and PowerShell automation.**
 
-TouchVault secures your API keys, passwords, and secrets in a KeePass database protected by your YubiKey. A 3-tier caching system minimizes YubiKey touches while keeping credentials hardware-protected. Built for GitHub Copilot and automation workflows where secrets should never exist in plaintext config files.
+TouchVault secures your API keys, passwords, and secrets in a KeePass database protected by a hardware key (YubiKey, OnlyKey, or any HMAC-SHA1-capable key). A 3-tier caching system minimizes key touches while keeping credentials hardware-protected. Built for GitHub Copilot and automation workflows where secrets should never exist in plaintext config files.
+
+```powershell
+Install-Module TouchVault
+```
 
 > **Free for personal use.** Commercial/professional use: [$5+ (pay what you think is fair)](https://buymeacoffee.com/D13tr1ch). One-time purchase, all v1.x updates included.
 >
-> [Buy a License](https://buymeacoffee.com/D13tr1ch) | [Report an Issue](https://github.com/D13tr1ch/TouchVault/issues)
+> [PowerShell Gallery](https://www.powershellgallery.com/packages/TouchVault) | [Buy a License](https://buymeacoffee.com/D13tr1ch) | [Report an Issue](https://github.com/D13tr1ch/TouchVault/issues)
 
 ---
 
