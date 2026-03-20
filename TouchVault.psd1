@@ -6,7 +6,7 @@
     Author            = 'TriHarmonic Solutions'
     CompanyName       = 'Beacon And Bridge Solutions LLC'
     Copyright         = '(c) 2025-2026 TriHarmonic Solutions, a division of Beacon And Bridge Solutions LLC. Dual License: Free personal / Commercial $5+.'
-    Description       = 'YubiKey-backed KeePass credential management for GitHub Copilot and PowerShell automation. Provides 3-tier caching (in-memory, DPAPI disk, CLI+YubiKey) with a topmost authorization popup.'
+    Description       = 'Hardware-key-backed KeePass credential management for GitHub Copilot and PowerShell automation. 3-tier caching (in-memory, DPAPI disk, KeePassXC CLI + touch key) with a topmost touch-to-authorize popup.'
 
     # Requirements
     PowerShellVersion = '5.1'
@@ -39,8 +39,8 @@
     # Metadata for gallery / discovery
     PrivateData = @{
         PSData = @{
-            Tags         = @('KeePass', 'YubiKey', 'Secrets', 'DPAPI', 'Credentials', 'Security', 'Copilot', 'Automation')
-            LicenseUri   = 'https://github.com/D13tr1ch/TouchVault/blob/main/LICENSE'
+            Tags         = @('KeePass', 'Secrets', 'DPAPI', 'Credentials', 'Security', 'Copilot', 'Automation', 'TouchVault', 'HardwareKey', 'PasswordManager')
+            LicenseUri   = 'https://github.com/D13tr1ch/TouchVault/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/D13tr1ch/TouchVault'
             # IconUri    = ''
             ReleaseNotes = @'
