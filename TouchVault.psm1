@@ -452,7 +452,7 @@ function Get-VaultEntry {
     $result   = $cliResult.Output
     $exitCode = $cliResult.ExitCode
 
-    if ($exitCode -ne 0) { throw "KeePassXC CLI error: $result" }
+    if ($exitCode -ne 0) { throw "KeePassXC CLI exited with code $exitCode. Check your database path, master password, and YubiKey." }
 
     $entry = @{}
     foreach ($line in $result) {
@@ -460,6 +460,7 @@ function Get-VaultEntry {
             $entry[$Matches[1]] = $Matches[2].Trim()
         }
     }
+    $result = $null  # clear raw CLI output (contains protected fields) from memory
 
     # Populate both caches
     $script:VaultCache[$EntryName] = $entry
@@ -716,7 +717,6 @@ Export-ModuleMember -Function @(
     'Set-VaultConfig'
     'Get-VaultConfig'
     'Save-VaultMasterPassword'
-    'Get-VaultMasterPassword'
     'Get-VaultEntry'
     'Get-VaultSecret'
     'Clear-VaultCache'
